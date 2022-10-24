@@ -3,7 +3,7 @@ using UnityEngine;
 public struct CameraComponent
 {
     public Transform cameraTransform;
-   
+    
     public float cameraFollowSmoothness;
     
     public Vector3 cameraOffset;

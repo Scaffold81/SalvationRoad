@@ -25,9 +25,6 @@ public class PlayerDataSystem : IEcsInitSystem,IEcsRunSystem
     }
     public void Run()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            LevelCange(2);
-        }
+       
     }
 }

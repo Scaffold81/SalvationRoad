@@ -30,22 +30,21 @@ public class StartScene : MonoBehaviour
         gameData.botComponentsPrefabs = botComponentsPrefabs;
        
         initSystems = new EcsSystems(ecsWorld)
-        
-            .Add(new PlayerInitSystem())
+            
             .Add(new PlayerDataSystem())
             .Add(new SpawnSystem())
-
+            .Add(new CameraSystem())
             .Inject(gameData);
        
         updateSystems = new EcsSystems(ecsWorld)
         
             .Add(new PlayerDataSystem())
-
+             .Add(new CameraSystem())
             .Inject(gameData);
        
         fixedUpdateSystems = new EcsSystems(ecsWorld)
             
-           // .Add(new CameraSystem())
+           
            
             .Inject(gameData);
 

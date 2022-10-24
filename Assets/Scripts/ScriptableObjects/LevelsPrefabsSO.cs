@@ -5,5 +5,6 @@ using UnityEngine;
 public class LevelsPrefabsSO : ScriptableObject
 {
     public LevelPrefabs[] levels;
+  
 }
 
