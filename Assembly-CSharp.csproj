@@ -60,7 +60,7 @@
     <Compile Include="Assets\Scripts\Components\PlayerDataComponent.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CameraConfigSO.cs" />
-    <Compile Include="Assets\Scripts\Monobehaviors\PlayerDataSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\PlayerDataSystem.cs" />
     <Compile Include="Assets\Scripts\LevelPrefabs.cs" />
     <Compile Include="Assets\Scripts\Components\CameraComponent.cs" />
     <Compile Include="Assets\Scripts\Systems\SpawnSystem.cs" />
@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Components\PlayerComponent.cs" />
     <Compile Include="Assets\Scripts\Systems\CameraSystem.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelsPrefabsSO.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviors\LevelData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

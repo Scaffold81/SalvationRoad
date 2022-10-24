@@ -24,34 +24,28 @@ public class StartScene : MonoBehaviour
     {
         ecsWorld = new EcsWorld();
         var gameData = new GameData();
+     
 
         gameData.cameraConfig = cameraConfig;
         gameData.levelsPrefabs=levelsPrefabs;
         gameData.botComponentsPrefabs = botComponentsPrefabs;
-       
+
         initSystems = new EcsSystems(ecsWorld)
-            
             .Add(new PlayerDataSystem())
             .Add(new SpawnSystem())
             .Add(new CameraSystem())
             .Inject(gameData);
-       
         updateSystems = new EcsSystems(ecsWorld)
-        
             .Add(new PlayerDataSystem())
-             .Add(new CameraSystem())
+            .Add(new CameraSystem())
             .Inject(gameData);
-       
+           
         fixedUpdateSystems = new EcsSystems(ecsWorld)
-            
-           
-           
             .Inject(gameData);
-
 
 
 #if UNITY_EDITOR
-       EcsWorldObserver.Create(ecsWorld);
+        EcsWorldObserver.Create(ecsWorld);
 #endif
 
         initSystems.ProcessInjects();

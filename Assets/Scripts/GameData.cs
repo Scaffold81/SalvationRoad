@@ -7,4 +7,5 @@ public struct GameData
    public CameraConfigSO cameraConfig;
    public LevelsPrefabsSO levelsPrefabs;
    public BotCamponentPrefabsSO botComponentsPrefabs;
+    internal GameObject playerSpawnPoint;
 }

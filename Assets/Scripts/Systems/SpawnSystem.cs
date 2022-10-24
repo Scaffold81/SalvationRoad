@@ -18,8 +18,15 @@ public class SpawnSystem :IEcsInitSystem
         ref var playerdataComponent = ref playerData.Get<PlayerDataComponent>();
        
         GameObject levelPrefab = GetLevelPrefab(levelIndex: playerdataComponent.levelIndex, subLevelIndex: playerdataComponent.subLevelIndex);
+        gameData.playerSpawnPoint=GetLevelData(levelIndex: playerdataComponent.levelIndex, subLevelIndex: playerdataComponent.subLevelIndex);
+
         CreateLevel(levelPrefab);
-        CreatePlayer(gameData.botComponentsPrefabs.chassis[0], gameData.botComponentsPrefabs.torso[0],Vector3.zero);
+
+        CreatePlayer(gameData.botComponentsPrefabs.chassis[0], gameData.botComponentsPrefabs.torso[0], gameData.playerSpawnPoint);
+    }
+    GameObject GetLevelData(int levelIndex, int subLevelIndex) 
+    {
+        return gameData.levelsPrefabs.levels[levelIndex].subLevels[subLevelIndex].GetComponent<LevelData>().playerSpawnPoint;
     }
     GameObject GetLevelPrefab(int levelIndex,int subLevelIndex)
     {
@@ -29,8 +36,8 @@ public class SpawnSystem :IEcsInitSystem
     {
         fabricaSystem.CreateLevel(levelPrefab);
     }
-    void CreatePlayer(GameObject chassisPrefab,GameObject torsoPrefab, Vector3 spawnPointPosition)
+    void CreatePlayer(GameObject chassisPrefab,GameObject torsoPrefab, GameObject spawnPoint)
     {
-        fabricaSystem.CreatePlayer(chassisPrefab, torsoPrefab, spawnPointPosition);
+        fabricaSystem.CreatePlayer(chassisPrefab, torsoPrefab, spawnPoint.transform.position);
     }
 }
