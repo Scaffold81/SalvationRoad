@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92326570950b6a479f659573133af0f, type: 3}
+  m_Name: BotCamponentPrefabs
+  m_EditorClassIdentifier: 
+  chassis:
+  - {fileID: 404661227756667972, guid: 57465fd54f79aaf44b98abe7d429c4f1, type: 3}
+  torso:
+  - {fileID: 2837582674410833073, guid: 689c2570e73bc2d47b06a95133efb721, type: 3}
+  primaryWeapon: []
+  secondaryWeapon: []
