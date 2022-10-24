@@ -1,0 +1,10 @@
+
+# Exclude these folders and all it content
+Assets/Firebase/
+Assets/Plugins/
+Packages/
+Library/
+Temp/
+obj/
+
+
