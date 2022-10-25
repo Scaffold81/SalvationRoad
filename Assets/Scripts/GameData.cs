@@ -4,8 +4,12 @@ using UnityEngine;
 
 public struct GameData 
 {
-   public CameraConfigSO cameraConfig;
-   public LevelsPrefabsSO levelsPrefabs;
-   public BotCamponentPrefabsSO botComponentsPrefabs;
-    internal GameObject playerSpawnPoint;
+    public CameraConfigSO cameraConfig;
+    
+    public TouchJoysticConfigSO touchJoysticConfig;
+    public BotCamponentPrefabsSO botComponentsPrefabs;
+
+    public LevelsPrefabsSO levelsPrefabs;
+
+    public GameObject playerSpawnPoint;
 }

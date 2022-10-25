@@ -61,8 +61,10 @@
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CameraConfigSO.cs" />
     <Compile Include="Assets\Scripts\Systems\PlayerDataSystem.cs" />
+    <Compile Include="Assets\Scripts\Monobehaviors\LevelData.cs" />
     <Compile Include="Assets\Scripts\LevelPrefabs.cs" />
     <Compile Include="Assets\Scripts\Components\CameraComponent.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\LevelsPrefabsSO.cs" />
     <Compile Include="Assets\Scripts\Systems\SpawnSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\FabricaSystem.cs" />
     <Compile Include="Assets\Scripts\Monobehaviors\StartScene.cs" />
@@ -70,8 +72,10 @@
     <Compile Include="Assets\Scripts\Systems\PlayerInitSystem.cs" />
     <Compile Include="Assets\Scripts\Components\PlayerComponent.cs" />
     <Compile Include="Assets\Scripts\Systems\CameraSystem.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjects\LevelsPrefabsSO.cs" />
-    <Compile Include="Assets\Scripts\Monobehaviors\LevelData.cs" />
+    <Compile Include="Assets\Scripts\Systems\TouchJoysticSystem.cs" />
+    <Compile Include="Assets\Scripts\Components\TouchJoystickComponent.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\TouchJoysticConfigSO.cs" />
+    <Compile Include="Assets\Scripts\TouchJoysticView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

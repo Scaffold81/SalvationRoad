@@ -11,20 +11,29 @@ public class StartScene : MonoBehaviour
     private EcsSystems fixedUpdateSystems;
 
     [SerializeField] private CameraConfigSO cameraConfig;
+    [SerializeField] private TouchJoysticConfigSO touchJoysticConfig;
+     
     [SerializeField] private LevelsPrefabsSO levelsPrefabs;
     [SerializeField] private BotCamponentPrefabsSO botComponentsPrefabs;
-
+    
+    private TouchJoysticView touchJoysticView;
     // Start is called before the first frame update
     void Start()
     {
-       
         StartGame();
     }
     void StartGame()
     {
         ecsWorld = new EcsWorld();
+        
         var gameData = new GameData();
-     
+
+        touchJoysticView=FindObjectOfType<TouchJoysticView>();
+
+
+        touchJoysticConfig.joystick = touchJoysticView.joystick;
+        touchJoysticConfig.joystickStick = touchJoysticView.joystickStick;
+        gameData.touchJoysticConfig = touchJoysticConfig;
 
         gameData.cameraConfig = cameraConfig;
         gameData.levelsPrefabs=levelsPrefabs;
@@ -34,12 +43,15 @@ public class StartScene : MonoBehaviour
             .Add(new PlayerDataSystem())
             .Add(new SpawnSystem())
             .Add(new CameraSystem())
+            .Add(new TouchJoysticSystem())
             .Inject(gameData);
         updateSystems = new EcsSystems(ecsWorld)
             .Add(new PlayerDataSystem())
             .Add(new CameraSystem())
+            .Add(new TouchJoysticSystem())
             .Inject(gameData);
-           
+        
+
         fixedUpdateSystems = new EcsSystems(ecsWorld)
             .Inject(gameData);
 
