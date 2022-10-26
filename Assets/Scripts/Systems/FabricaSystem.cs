@@ -17,21 +17,17 @@ public class FabricaSystem
         MonoBehaviour.Instantiate(levelPrefab, Vector3.zero, Quaternion.identity);
         MonoBehaviour.print(message: "Level: " + " subLevel: " + "Created");
     }
-    public void CreatePlayer(GameObject chassisPrefab, GameObject torsoPrefab, Vector3 spawnPointPosition)
+    public void CreatePlayer(GameObject playerPrefab,GameObject chassisPrefab, GameObject torsoPrefab, Vector3 spawnPointPosition)
     {
-        
-        
-
-        var player_go = new GameObject();
-
-        player_go.transform.position = spawnPointPosition;
-        GameObject  chassisPrefab_t=MonoBehaviour.Instantiate<GameObject>(chassisPrefab, player_go.transform.position, Quaternion.identity);
-        chassisPrefab_t.transform.SetParent(player_go.transform);
-
         EcsEntity playerEntity = ecsWorld.NewEntity();
-
         ref var player = ref playerEntity.Get<PlayerComponent>();
+
+        GameObject player_go = MonoBehaviour.Instantiate<GameObject>(playerPrefab, spawnPointPosition, Quaternion.identity); 
+        GameObject  chassisPrefab_t=MonoBehaviour.Instantiate<GameObject>(chassisPrefab, player_go.transform.position, Quaternion.identity);
+
+        chassisPrefab_t.transform.SetParent(player_go.transform);
         
         player.playerTransform = player_go.transform;
+        player.playerCharasterController =player_go.GetComponent<CharacterController>();
     }
 }

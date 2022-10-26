@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using Leopotam.Ecs;
 public struct TouchJoystickComponent
 {
     public RectTransform joystick;
@@ -7,6 +7,7 @@ public struct TouchJoystickComponent
 
     public Vector3 joystick_start_point;
     public Vector3 joystick_touch_point;
+    public Vector3 joystick_direction;
 
     public float joystick_radius;
     public float joystic_blindspot_zone_vertical;

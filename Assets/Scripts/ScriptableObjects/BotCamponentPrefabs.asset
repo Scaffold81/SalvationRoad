@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f92326570950b6a479f659573133af0f, type: 3}
   m_Name: BotCamponentPrefabs
   m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 3073158579014555353, guid: 29ecd2aac0dcaab4a966cc8896675ad7,
+    type: 3}
   chassis:
   - {fileID: 404661227756667972, guid: 57465fd54f79aaf44b98abe7d429c4f1, type: 3}
   torso:

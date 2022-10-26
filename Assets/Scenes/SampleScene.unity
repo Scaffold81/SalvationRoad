@@ -727,7 +727,7 @@ GameObject:
   - component: {fileID: 1586493489}
   - component: {fileID: 1586493488}
   m_Layer: 5
-  m_Name: JoysticImage
+  m_Name: JoysticView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

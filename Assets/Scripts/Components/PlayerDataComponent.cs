@@ -6,6 +6,6 @@ public struct PlayerDataComponent
 {
     public int levelIndex;
     public int subLevelIndex;
-
+   
     BotElementsComponent botElemets;
 }

@@ -4,8 +4,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "BotCamponentPrefabs", menuName = "CostomScriptableObjects/BotCamponentPrefabsSO")]
 public class BotCamponentPrefabsSO : ScriptableObject
 {
+    public GameObject playerPrefab;
+
     public GameObject[] chassis;
     public GameObject[] torso;
     public GameObject[] primaryWeapon;
     public GameObject[] secondaryWeapon;
+    
 }
