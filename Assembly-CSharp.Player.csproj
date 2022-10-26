@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Systems\ChassisRotateSystem.cs" />
     <Compile Include="Assets\Scripts\Components\BotElementsComponent.cs" />
     <Compile Include="Assets\Scripts\Components\PlayerDataComponent.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TouchJoysticConfigSO.cs" />
@@ -64,6 +65,8 @@
     <Compile Include="Assets\Scripts\Systems\PlayerDataSystem.cs" />
     <Compile Include="Assets\Scripts\Monobehaviors\LevelData.cs" />
     <Compile Include="Assets\Scripts\Systems\TouchJoysticSystem.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\PhysicsConfigSO.cs" />
+    <Compile Include="Assets\Scripts\Systems\GravitySystem.cs" />
     <Compile Include="Assets\Scripts\LevelPrefabs.cs" />
     <Compile Include="Assets\Scripts\Components\CameraComponent.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelsPrefabsSO.cs" />
@@ -77,6 +80,9 @@
     <Compile Include="Assets\Scripts\Components\TouchJoystickComponent.cs" />
     <Compile Include="Assets\Scripts\Components\PlayerComponent.cs" />
     <Compile Include="Assets\Scripts\Systems\CameraSystem.cs" />
+    <Compile Include="Assets\Scripts\ChassisView.cs" />
+    <Compile Include="Assets\Scripts\Systems\PlayerMoveSystem.cs" />
+    <Compile Include="Assets\Scripts\TorsoView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

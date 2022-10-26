@@ -837,6 +837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraConfig: {fileID: 11400000, guid: f158cb852f353614dac0666634e3eafa, type: 2}
   touchJoysticConfig: {fileID: 11400000, guid: baac5f6d8b59828468449ff9e823fa01, type: 2}
+  physicsConfig: {fileID: 11400000, guid: b05fd88463b4f52488fe073b880eb727, type: 2}
   levelsPrefabs: {fileID: 11400000, guid: 0f7c4e3e75bd4ac40a16b3212cb58303, type: 2}
   botComponentsPrefabs: {fileID: 11400000, guid: 3728597fb815d754e860e0d4f0430d5e,
     type: 2}

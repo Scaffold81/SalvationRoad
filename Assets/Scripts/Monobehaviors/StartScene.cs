@@ -11,7 +11,8 @@ public class StartScene : MonoBehaviour
 
     [SerializeField] private CameraConfigSO cameraConfig;
     [SerializeField] private TouchJoysticConfigSO touchJoysticConfig;
-     
+    [SerializeField] private PhysicsConfigSO physicsConfig;
+
     [SerializeField] private LevelsPrefabsSO levelsPrefabs;
     [SerializeField] private BotCamponentPrefabsSO botComponentsPrefabs;
     
@@ -39,11 +40,14 @@ public class StartScene : MonoBehaviour
         gameData.levelsPrefabs=levelsPrefabs;
         gameData.botComponentsPrefabs = botComponentsPrefabs;
 
-       
+        gameData.physicsConfig = physicsConfig;
+        
         systems
             .Add(new PlayerDataSystem())
             .Add(new SpawnSystem())
-
+            .Add(new GravitySystem())
+            .Add(new ChassisRotateSystem())
+            .Add(new PlayerMoveSystem())
             .Add(new PlayerDataSystem())
             
             .Add(new PlayerSystem())
@@ -52,11 +56,7 @@ public class StartScene : MonoBehaviour
 
             .Inject(gameData);
         
-
-        
-
-
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         EcsWorldObserver.Create(ecsWorld);
 #endif
 
