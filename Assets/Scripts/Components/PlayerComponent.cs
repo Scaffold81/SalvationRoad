@@ -6,11 +6,11 @@ public struct PlayerComponent
     public float moveSpeed;
     public float health;
     public float viewRadius;
-    public int viewAngle;
+    public float viewAngle;
     public float torsoSpeedRotate;
 
     public List<EnemyView> targets;
-    public EnemyView target;
+    public Transform target;
 
     public Transform playerTransform;
     public Transform playerChassisTransform;

@@ -97,11 +97,13 @@ public class TouchJoysticSystem :  IEcsInitSystem,IEcsRunSystem
         }
         else
         {
-            Vector3 dir = (joysticComponent.joystick_touch_point - joysticComponent.joystick_start_point).normalized;
-            joysticComponent.joystick_direction = dir;
-            joysticComponent.joystick_stick.transform.position = dir;
-            joysticComponent.joystick_stick.transform.position = joysticComponent.joystick_start_point + (dir.normalized * joysticComponent.joystick_radius / 2);
+            Vector3 dir_stick = (joysticComponent.joystick_touch_point - joysticComponent.joystick_start_point).normalized;
+           
+            joysticComponent.joystick_stick.transform.position = dir_stick;
+            joysticComponent.joystick_stick.transform.position = joysticComponent.joystick_start_point + (dir_stick.normalized * joysticComponent.joystick_radius / 2);
         }
+        Vector3 dir = (joysticComponent.joystick_touch_point - joysticComponent.joystick_start_point).normalized;
+        joysticComponent.joystick_direction = dir;
 #else
         if (Input.GetTouch(0).phase == TouchPhase.Began)
         {

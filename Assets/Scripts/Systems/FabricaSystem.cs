@@ -40,7 +40,7 @@ public class FabricaSystem
 
         player.viewRadius = torsoView.viewRadius;
         player.viewAngle = torsoView.viewAngle;
-
+        player.torsoSpeedRotate = torsoView.speedRotate;
         player.moveSpeed = chassisView.Speed;
 
         player.playerTransform = player_go.transform;

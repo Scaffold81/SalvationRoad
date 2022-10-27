@@ -49,11 +49,12 @@ public class PlayerTargetingSystem : IEcsRunSystem
     }
     void SortObjects()
     {
-        if (playerComponent.targets.Count > 0)
+        if (playerComponent.targets.Count > 1)
         {
             playerComponent.targets.Sort(delegate (EnemyView t1, EnemyView t2)
             {
-                return Vector3.Distance(t1.transform.position, playerComponent.playerChassisTransform.position).CompareTo(Vector3.Distance(t2.transform.position, playerComponent.playerChassisTransform.position));
+                return Vector3.Distance(t1.transform.position, playerComponent.playerChassisTransform.position).CompareTo(Vector3.Distance(
+                    t2.transform.position, playerComponent.playerChassisTransform.position));
 
             });
         }
@@ -62,7 +63,7 @@ public class PlayerTargetingSystem : IEcsRunSystem
     {
         if (playerComponent.targets.Count > 0)
         {
-            playerComponent.target = playerComponent.targets[0];
+            playerComponent.target = playerComponent.targets[0].transform;
         }
         else
         {
