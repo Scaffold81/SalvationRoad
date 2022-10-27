@@ -5,15 +5,19 @@ public struct PlayerComponent
 {
     public float moveSpeed;
     public float health;
+    public float viewRadius;
+    public int viewAngle;
+    public float torsoSpeedRotate;
 
     public List<EnemyView> targets;
+    public EnemyView target;
 
     public Transform playerTransform;
     public Transform playerChassisTransform;
-    public CharacterController playerCharasterController;
-    public Vector3 moveDirection;
     public Transform playerTorsoTransform;
-    public float viewRadius;
-    public int viewAngle;
-    internal EnemyView target;
+    public CharacterController playerCharasterController;
+    
+    public Vector3 moveDirection;
+   
+   
 }

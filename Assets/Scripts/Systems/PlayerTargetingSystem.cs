@@ -14,6 +14,13 @@ public class PlayerTargetingSystem : IEcsRunSystem
             playerComponent = _playerComponent;
         }
         FindVisibleTargets();
+        SortObjects();
+        GetClosestTarget();
+
+        if (playerComponent.target != null)
+        {
+            Debug.DrawLine(playerComponent.playerChassisTransform.position, playerComponent.target.transform.position, Color.red);
+        }
     }
     void FindVisibleTargets()
     {
@@ -32,22 +39,34 @@ public class PlayerTargetingSystem : IEcsRunSystem
                 RaycastHit hit;
                 if (Physics.Raycast(playerComponent.playerChassisTransform.position, dirToTarget, out hit, dstToTarget))
                 {
-                    
-                    if (target.GetComponent<EnemyView>() != null)
+                    if (hit.collider.GetComponent<EnemyView>() != null)
                     {
-                        Debug.DrawLine(playerComponent.playerChassisTransform.position, hit.transform.position, Color.red);
                         playerComponent.targets.Add(target.GetComponent<EnemyView>());
                     }
-                    else
-                    {
-                        Debug.DrawLine(playerComponent.playerChassisTransform.position, hit.transform.position, Color.green);
-                    }
-
                 }
             }
         }
+    }
+    void SortObjects()
+    {
+        if (playerComponent.targets.Count > 0)
+        {
+            playerComponent.targets.Sort(delegate (EnemyView t1, EnemyView t2)
+            {
+                return Vector3.Distance(t1.transform.position, playerComponent.playerChassisTransform.position).CompareTo(Vector3.Distance(t2.transform.position, playerComponent.playerChassisTransform.position));
 
-
-
+            });
+        }
+    }
+    private void GetClosestTarget()
+    {
+        if (playerComponent.targets.Count > 0)
+        {
+            playerComponent.target = playerComponent.targets[0];
+        }
+        else
+        {
+            playerComponent.target = null;
+        }
     }
 }

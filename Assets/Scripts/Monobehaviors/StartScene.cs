@@ -41,7 +41,7 @@ public class StartScene : MonoBehaviour
         gameData.botComponentsPrefabs = botComponentsPrefabs;
 
         gameData.physicsConfig = physicsConfig;
-        
+
         systems
             .Add(new PlayerDataSystem())
             .Add(new SpawnSystem())
@@ -49,11 +49,13 @@ public class StartScene : MonoBehaviour
             .Add(new ChassisRotateSystem())
             .Add(new PlayerMoveSystem())
             .Add(new PlayerDataSystem())
-            
+
             .Add(new PlayerSystem())
             .Add(new TouchJoysticSystem())
             .Add(new CameraSystem())
             .Add(new PlayerTargetingSystem())
+            .Add(new TorsoRotateSystem())
+
             .Inject(gameData);
         
         #if UNITY_EDITOR

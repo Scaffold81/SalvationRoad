@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Monobehaviors\LevelData.cs" />
     <Compile Include="Assets\Scripts\Systems\TouchJoysticSystem.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\PhysicsConfigSO.cs" />
+    <Compile Include="Assets\Scripts\Systems\PlayerTargetingSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\PlayerMoveSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\GravitySystem.cs" />
     <Compile Include="Assets\Scripts\LevelPrefabs.cs" />
@@ -80,11 +81,11 @@
     <Compile Include="Assets\Scripts\Systems\PlayerInputSystem.cs" />
     <Compile Include="Assets\Scripts\TouchJoysticView.cs" />
     <Compile Include="Assets\Scripts\Systems\PlayerSystem.cs" />
+    <Compile Include="Assets\Scripts\Components\EnemyView.cs" />
     <Compile Include="Assets\Scripts\Components\TouchJoystickComponent.cs" />
     <Compile Include="Assets\Scripts\Components\PlayerComponent.cs" />
     <Compile Include="Assets\Scripts\Systems\CameraSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\PlayerTargetingSystem.cs" />
-    <Compile Include="Assets\Scripts\Components\EnemyView.cs" />
+    <Compile Include="Assets\Scripts\Systems\TorsoRotateSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

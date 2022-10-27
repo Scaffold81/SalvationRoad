@@ -12,7 +12,7 @@ public class ChassisRotateSystem : IEcsRunSystem
         {
             playerComponent = filter.Get1(i);
         }
-        Vector3 newDirection = Vector3.RotateTowards(playerComponent.playerChassisTransform.forward,new Vector3(playerComponent.moveDirection.x,0, playerComponent.moveDirection.z) ,10*Time.deltaTime,0.0f);
+        Vector3 newDirection = Vector3.RotateTowards(playerComponent.playerChassisTransform.forward,new Vector3(playerComponent.moveDirection.x,0, playerComponent.moveDirection.z) ,1*Time.deltaTime,0.0f);
         playerComponent.playerChassisTransform.rotation = Quaternion.LookRotation(newDirection);
     }
 
