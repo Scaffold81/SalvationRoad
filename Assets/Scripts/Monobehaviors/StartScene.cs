@@ -53,7 +53,7 @@ public class StartScene : MonoBehaviour
             .Add(new PlayerSystem())
             .Add(new TouchJoysticSystem())
             .Add(new CameraSystem())
-
+            .Add(new PlayerTargetingSystem())
             .Inject(gameData);
         
         #if UNITY_EDITOR

@@ -38,12 +38,15 @@ public class FabricaSystem
         player.health += torsoView.health;
         player.health += chassisView.health;
 
+        player.viewRadius = torsoView.viewRadius;
+        player.viewAngle = torsoView.viewAngle;
+
         player.moveSpeed = chassisView.Speed;
 
         player.playerTransform = player_go.transform;
         player.playerChassisTransform = chassisPrefab_t.transform;
         player.playerTorsoTransform = torsoPrefab_t.transform;
-
+        
         player.playerCharasterController =player_go.GetComponent<CharacterController>();
     }
 }
