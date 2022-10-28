@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Systems\ChassisRotateSystem.cs" />
     <Compile Include="Assets\Scripts\Components\BotElementsComponent.cs" />
     <Compile Include="Assets\Scripts\Components\PlayerDataComponent.cs" />
+    <Compile Include="Assets\Scripts\Systems\TorsoRotateSystem.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\TouchJoysticConfigSO.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CameraConfigSO.cs" />
@@ -85,7 +86,6 @@
     <Compile Include="Assets\Scripts\Components\TouchJoystickComponent.cs" />
     <Compile Include="Assets\Scripts\Components\PlayerComponent.cs" />
     <Compile Include="Assets\Scripts\Systems\CameraSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\TorsoRotateSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

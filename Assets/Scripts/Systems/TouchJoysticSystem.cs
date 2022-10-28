@@ -68,7 +68,7 @@ public class TouchJoysticSystem :  IEcsInitSystem,IEcsRunSystem
         foreach (var i in playerFilter)
         {
             ref var playerComponent = ref playerFilter.Get1(i);
-
+          
             playerComponent.moveDirection = new Vector3(joysticComponent.joystick_direction.x, 0, joysticComponent.joystick_direction.y);
         }
     }

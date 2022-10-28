@@ -11,7 +11,6 @@ public class PlayerSystem : IEcsInitSystem,IEcsRunSystem
         foreach (var i in filter)
         {
             playerComponent = filter.Get1(i);
-            playerComponent.targets = new System.Collections.Generic.List<EnemyView>();
         }
 
     }
